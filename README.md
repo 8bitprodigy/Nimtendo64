@@ -16,7 +16,7 @@ nimble install
 
 ## Template project
 
-The `tests` directory includes files for a template project/demo and contains all the files you need to build a nim project for the Nintendo 64, assuming you have the [libDragon library and toolchain installed]([Installing libdragon · DragonMinded/libdragon Wiki · GitHub](https://github.com/DragonMinded/libdragon/wiki/Installing-libdragon). To build a rom, navigate to `tests` and run `./mkrom`
+The `tests` directory includes files for a template project/demo and contains all the files you need to build a nim project for the Nintendo 64, assuming you have the [libDragon library and toolchain installed](https://github.com/DragonMinded/libdragon/wiki/Installing-libdragon). To build a rom, navigate to `tests` and run `./mkrom`
 
 ---
 
