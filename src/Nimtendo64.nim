@@ -11,9 +11,9 @@ import
   Nimtendo64/joybus,
   #joybus_accessory,
   #pixelfx,
-  Nimtendo64/joypad
+  Nimtendo64/joypad,
   #controller,
-  #rtc,
+  Nimtendo64/rtc,
   #mempak,
   #tpak,
   #display,
@@ -29,7 +29,7 @@ import
   #backtrace,
   #rdp,
   #rsp,
-  #timer,
+  Nimtendo64/timer
   #exception,
   #dir,
   #mpeg2,

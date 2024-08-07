@@ -23,10 +23,9 @@ putEnv("N64_C_AND_CXX_FLAGS", "-march=vr4300 -mtune=vr4300 -I " & getEnv("N64_IN
 putEnv("N64_CFLAGS",   getEnv("N64_C_AND_CXX_FLAGS") & "-std=gnu99 -g3 -MMD")
 putEnv("N64_CXXFLAGS", getEnv("N64_C_AND_CXX_FLAGS") & "-std=gnu++17 -g3 -MMD")
 
-switch("os", "standalone")
+switch("os", "any")
 switch("cpu", "mips")
-switch("gc", "none")
-switch("mm", "none")
+switch("mm", "orc")
 switch("threads", "off")
 switch("stackTrace", "off")
 switch("lineTrace", "off")
@@ -37,6 +36,6 @@ switch("passL", "-g -L" & getEnv("N64_LIBDIR") & " -l:libdragon.a -l:libm.a -l:l
 #switch("passC", "-mabicalls")
 switch("nimcache", ".nimcache")
 
-switch("mips.standalone.gcc.options.linker", "-static")
-switch("mips.standalone.gcc.exe", getEnv("N64_CC"))
-switch("mips.standalone.gcc.linkerexe", getEnv("N64_LD"))
+switch("mips.any.gcc.options.linker", "-static")
+switch("mips.any.gcc.exe", getEnv("N64_CC"))
+switch("mips.any.gcc.linkerexe", getEnv("N64_LD"))

@@ -1,0 +1,3 @@
+#!/bin/sh
+nim c -f $1.nim
+n64tool -o $1.z64 -a 256 $1

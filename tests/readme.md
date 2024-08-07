@@ -7,7 +7,7 @@ This is an example project you can build off of to create your own N64 games in 
 ## Building
 
 ```shell
-./mkrom
+./mkz64 test[number here].nim
 ```
 
 ---

@@ -1,5 +1,10 @@
 export console
 
+#################
+#               #
+#  C O N S T S  #
+#               #
+#################
 const
   TAB_WIDTH*          = 4
   HORIZONTAL_PADDING* = 64
@@ -11,6 +16,11 @@ const
   CONSOLE_WIDTH*      = 64
   CONSOLE_HEIGHT*     = 28
 
+###############
+#             #
+#  P R O C S  #
+#             #
+###############
 proc init*() {.importc: "console_init", header: "console.h".}
 
 proc close*() {.importc: "console_close", header: "console.h".}

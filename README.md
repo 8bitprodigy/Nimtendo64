@@ -1,6 +1,6 @@
 # Nimtendo64
 
-Nim wrapper for [libDragon (preview branch)]([GitHub - DragonMinded/libdragon at preview](https://github.com/DragonMinded/libdragon/tree/preview))
+Nim wrapper for [libDragon (preview branch)](https://github.com/DragonMinded/libdragon/tree/preview)
 
 This is very early on, so please don't expect it to be particularly useful beyond being a proof of concept of Nim code running on the Nintendo 64. Hopefully with contributions from the community, that can change.
 
@@ -24,15 +24,13 @@ The `tests` directory includes files for a template project/demo and contains al
 
 Currently implemented libDragon modules:
 
-- console.h
+- `console.h`
 
-- joypad.h(untested/incomplete)
+- `joypad.h`(untested/incomplete)
 
-- joybus.h(untested/incomplete)
+- `joybus.h`(untested/incomplete)
 
 ---
-
-
 
 ## Contributing
 
