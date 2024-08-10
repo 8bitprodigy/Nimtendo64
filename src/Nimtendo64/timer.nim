@@ -9,7 +9,7 @@ type
     WITHOUT_CONTEXT,
     WITH_CONTEXT
 
-  Link *{.pure, packed, importc:"timer_link", header: "timer.h".} = ref object
+  Link * = ref object
     left:     uint32
     `set`:    uint32
     ovfl:     cint
@@ -27,22 +27,22 @@ const
 
 # TODO: Implement or wrap TIMER_... macros.
 
-proc init*() {.header: "timer.h", importc: "timer_init".}
+proc init*() {.importc: "timer_init".}
 
-proc close*() {.header: "timer.h", importc: "timer_close".}
+proc close*() {.importc: "timer_close".}
 
-proc ticks*() {.header: "timer.h", importc: "timer_ticks".}
+proc ticks*() {.importc: "timer_ticks".}
 
-proc new*(ticks, flags: cint, callback: Callback) {.header: "timer.h", importc: "new_timer".}
+proc new*(ticks, flags: cint, callback: Callback) {.importc: "new_timer".}
 
-proc new_context*(ticks, flags: cint, callback: Callback_With_Context, ctx: ptr UncheckedArray[byte]) {.header: "timer.h", importc: "new_timer_context".}
+proc new_context*(ticks, flags: cint, callback: Callback_With_Context, ctx: ptr UncheckedArray[byte]) {.importc: "new_timer_context".}
 
-proc start*(timer: Link, ticks, flags: cint, callback: Callback) {.header: "timer.h", importc: "start_timer".}
+proc start*(timer: Link, ticks, flags: cint, callback: Callback) {.importc: "start_timer".}
 
-proc start_context*(timer: Link, ticks, flags: cint, callback: Callback_With_Context, ctx: ptr UncheckedArray[byte]) {.header: "timer.h", importc: "start_timer_context".}
+proc start_context*(timer: Link, ticks, flags: cint, callback: Callback_With_Context, ctx: ptr UncheckedArray[byte]) {.importc: "start_timer_context".}
 
-proc restart*(timer: Link) {.header: "timer.h", importc: "restart_timer".}
+proc restart*(timer: Link) {.importc: "restart_timer".}
 
-proc stop*(timer: Link) {.header: "timer.h", importc: "stop_timer".}
+proc stop*(timer: Link) {.importc: "stop_timer".}
 
-proc delete*(timer: Link) {.header: "timer.h", importc: "delete_timer".}
+proc delete*(timer: Link) {.importc: "delete_timer".}

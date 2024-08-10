@@ -19,7 +19,7 @@ func format_type(accessory: Accessory_Types): string =
     return "(bio sensor)"
   of SNAP_STATION:
     return "(snap station)"
-  of UNKNOWN:
+  of Accessory_Types.UNKNOWN:
     return "(unknown)"
   else:
     return "(unspecified)"
@@ -49,9 +49,9 @@ while true:
     let is_connected = is_connected(port)
     pressed = get_buttons_pressed(port)
 
-    if pressed.buttons.A: set_rumble_active(port, true)
-    if pressed.buttons.A: set_rumble_active(port, false)
-    if pressed.buttons.Z: press = accessory_read(port, uint16(0x0000), addr(data[0]))
+    if A in pressed: set_rumble_active(port, true)
+    if A in pressed: set_rumble_active(port, false)
+    if Z in pressed: press = accessory_read(port, uint16(0x0000), addr(data[0]))
 
     let present_status = if is_connected: "present" else: "not present"
     echo "Controller ", int(port)+1, present_status, "\n"

@@ -57,6 +57,6 @@ const
 #             #
 ###############
 
-proc exec*(input, output: pointer) {.importc: "joybus_exec", header: "joybus.h".}
+proc exec*(input, output: pointer) {.importc: "joybus_exec".}
 
-proc exec_cmd*(port: cint, send_len, recv_len: csize_t, send_data: pointer, recv_data: pointer) {.importc: "joybus_exec_cmd", header: "joybus.h".}
+proc exec_cmd*(port: cint, send_len, recv_len: csize_t, send_data: pointer, recv_data: pointer) {.importc: "joybus_exec_cmd".}
