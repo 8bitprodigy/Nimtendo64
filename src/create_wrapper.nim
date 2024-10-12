@@ -8,7 +8,15 @@ template wrapHeader(name: string): untyped =
         outputPath "Nimtendo64" / name & ".nim"
         path n64_inst
         name & ".h"
-
+#[
+importc:
+    outputPath "Nimtendo64"
+    path n64_inst
+    ignore n64_inst / "c++" 
+    ignore n64_inst / "sys" 
+    ignore n64_inst / "ssp"
+    ignore n64_inst / "libdragon.h"
+]#
 
 importc:
     outputPath "Nimtendo64" / "n64types.nim"
